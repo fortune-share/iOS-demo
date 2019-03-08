@@ -7,6 +7,7 @@
 //
 
 #import "GameScene.h"
+#import "SecurityHelper.h"
 
 @implementation GameScene {
     SKShapeNode *_spinnyNode;
@@ -80,6 +81,60 @@
     // Called before each frame is rendered
 }
 
+- (void) makeOrder {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        // 创建订单，实际上这部分功能应该由商户服务端负责，此处只是为了demo的演示便利； 要索取其他服务端的加签验签算法可向商务索取。
+        // cc721b17b6c0411ea2c0dd2a1862b031
+        NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://server.im.fortune.mingshz.com/preparePayOrder"]];
+        // 设置方法
+        [request setHTTPMethod:@"POST"];
+        // 设置头
+        [request addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+        [request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
+        
+        // 设置消息
+        SecurityHelper* sh =[[SecurityHelper alloc] init];
+        
+        // 商户订单号
+        NSString* pid = [[[NSUUID UUID] UUIDString] stringByReplacingOccurrencesOfString:@"-" withString:@""];
+        NSDictionary* data = [sh signData:@{
+                                            @"appId":@"cc721b17b6c0411ea2c0dd2a1862b031",
+                                            @"amount":@100,
+                                            @"body":@"充值炫富",
+                                            @"id":pid,
+                                            @"notify_url":@"https://www.google.com"// 通知地址。
+                                            } withOutTime:NO];
+        
+        // {"amount":100,"appId":"cc721b17b6c0411ea2c0dd2a1862b031","body":"充值炫富","id":"869D9900-2E00-4642-A644-1EF5CF67B6B4","notify_url":"https://www.google.com","timestamp":1.551952652773745E12}
+        
+        [request setHTTPBody:[NSJSONSerialization dataWithJSONObject:data options:0 error:nil]];
+        
+        NSURLSession* session = NSURLSession.sharedSession;
+        NSURLSessionDataTask* task = [session dataTaskWithRequest:request completionHandler:^(NSData* data, NSURLResponse* response, NSError* error) {
+            
+            // po [NSJSONSerialization JSONObjectWithData:data options:0 error:nil][@"tooltip"]
+            // po [NSString stringWithCString:(const char*)[data bytes] encoding:NSUTF8StringEncoding]
+            if(error){
+                NSLog(@"local error: %@",error);
+            }else{
+                NSHTTPURLResponse* r = (NSHTTPURLResponse*)response;
+                if(r.statusCode==200){
+                    NSDictionary* dict =[NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+                    if([sh verifySign:dict]){
+                        NSString* transactionId = dict[@"transactionId"];
+                        // 调用SDK 发起支付。 SDK方法应该注意当前并不是在UI线程中！
+                        NSLog(@"发起支付: %@", transactionId);
+                    }else
+                        NSLog(@"服务端不可信任");
+                }else{
+                    NSLog(@"text response content : %@",[NSString stringWithCString:(const char*)[data bytes] encoding:NSUTF8StringEncoding]);
+                }
+            }
+        }];
+        [task resume];
+    });
+}
+
 #if TARGET_OS_IOS || TARGET_OS_TV
 // Touch-based event handling
 
@@ -99,6 +154,7 @@
     for (UITouch *t in touches) {
         [self makeSpinnyAtPoint:[t locationInNode:self] color:[SKColor redColor]];
     }
+    [self makeOrder];
 }
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
     for (UITouch *t in touches) {
@@ -114,6 +170,7 @@
     [_label runAction:[SKAction actionNamed:@"Pulse"] withKey:@"fadeInOut"];
     
     [self makeSpinnyAtPoint:[event locationInNode:self] color:[SKColor greenColor]];
+    [self makeOrder];
 }
 
 - (void)mouseDragged:(NSEvent *)event {

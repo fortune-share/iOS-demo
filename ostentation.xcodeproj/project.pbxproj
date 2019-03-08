@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		221CBB38128340C4F806D0E2 /* libPods-ostentation macOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F6BE511788B40ACFD93FAF /* libPods-ostentation macOS.a */; };
 		2338309F222E67AB00AA861E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2338309E222E67AB00AA861E /* AppDelegate.m */; };
 		233830A2222E67AB00AA861E /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 233830A1222E67AB00AA861E /* GameViewController.m */; };
 		233830A5222E67AB00AA861E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 233830A3222E67AB00AA861E /* Main.storyboard */; };
@@ -24,9 +25,54 @@
 		233830C3222E67AB00AA861E /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 23383094222E67AA00AA861E /* GameScene.m */; };
 		233830C4222E67AB00AA861E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23383095222E67AB00AA861E /* Assets.xcassets */; };
 		233830C5222E67AB00AA861E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23383095222E67AB00AA861E /* Assets.xcassets */; };
+		233830D1222E76E900AA861E /* private_key.pem in Resources */ = {isa = PBXBuildFile; fileRef = 233830CF222E76E900AA861E /* private_key.pem */; };
+		233830D2222E76E900AA861E /* private_key.pem in Resources */ = {isa = PBXBuildFile; fileRef = 233830CF222E76E900AA861E /* private_key.pem */; };
+		233830D3222E76E900AA861E /* public.pem in Resources */ = {isa = PBXBuildFile; fileRef = 233830D0222E76E900AA861E /* public.pem */; };
+		233830D4222E76E900AA861E /* public.pem in Resources */ = {isa = PBXBuildFile; fileRef = 233830D0222E76E900AA861E /* public.pem */; };
+		233830D7222E7A0200AA861E /* SecurityHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 233830D6222E7A0200AA861E /* SecurityHelper.m */; };
+		233830D8222E7A0200AA861E /* SecurityHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 233830D6222E7A0200AA861E /* SecurityHelper.m */; };
+		233830F7222E7CBB00AA861E /* DemoTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 233830F6222E7CBB00AA861E /* DemoTest.m */; };
+		233830F8222E7CBB00AA861E /* DemoTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 233830F6222E7CBB00AA861E /* DemoTest.m */; };
+		233830FE222E86E000AA861E /* rsaCert.crt in Resources */ = {isa = PBXBuildFile; fileRef = 233830FA222E86E000AA861E /* rsaCert.crt */; };
+		233830FF222E86E000AA861E /* rsaCert.crt in Resources */ = {isa = PBXBuildFile; fileRef = 233830FA222E86E000AA861E /* rsaCert.crt */; };
+		23383100222E86E000AA861E /* rsaPrivate.p12 in Resources */ = {isa = PBXBuildFile; fileRef = 233830FB222E86E000AA861E /* rsaPrivate.p12 */; };
+		23383101222E86E000AA861E /* rsaPrivate.p12 in Resources */ = {isa = PBXBuildFile; fileRef = 233830FB222E86E000AA861E /* rsaPrivate.p12 */; };
+		23383102222E86E000AA861E /* rsaCert.der in Resources */ = {isa = PBXBuildFile; fileRef = 233830FC222E86E000AA861E /* rsaCert.der */; };
+		23383103222E86E000AA861E /* rsaCert.der in Resources */ = {isa = PBXBuildFile; fileRef = 233830FC222E86E000AA861E /* rsaCert.der */; };
+		23383104222E86E000AA861E /* rsaCertReq.csr in Resources */ = {isa = PBXBuildFile; fileRef = 233830FD222E86E000AA861E /* rsaCertReq.csr */; };
+		23383105222E86E000AA861E /* rsaCertReq.csr in Resources */ = {isa = PBXBuildFile; fileRef = 233830FD222E86E000AA861E /* rsaCertReq.csr */; };
+		23383110222FF85600AA861E /* platform.der in Resources */ = {isa = PBXBuildFile; fileRef = 2338310A222FF7BA00AA861E /* platform.der */; };
+		23383111222FF85600AA861E /* platform.pem in Resources */ = {isa = PBXBuildFile; fileRef = 2338310B222FF7BB00AA861E /* platform.pem */; };
+		23383112222FF85700AA861E /* platform.der in Resources */ = {isa = PBXBuildFile; fileRef = 2338310A222FF7BA00AA861E /* platform.der */; };
+		23383113222FF85700AA861E /* platform.pem in Resources */ = {isa = PBXBuildFile; fileRef = 2338310B222FF7BB00AA861E /* platform.pem */; };
+		233831142231092200AA861E /* platform.der in Resources */ = {isa = PBXBuildFile; fileRef = 2338310A222FF7BA00AA861E /* platform.der */; };
+		233831152231092200AA861E /* platform.der in Resources */ = {isa = PBXBuildFile; fileRef = 2338310A222FF7BA00AA861E /* platform.der */; };
+		233831162231095000AA861E /* platform.pem in Resources */ = {isa = PBXBuildFile; fileRef = 2338310B222FF7BB00AA861E /* platform.pem */; };
+		233831172231095100AA861E /* platform.pem in Resources */ = {isa = PBXBuildFile; fileRef = 2338310B222FF7BB00AA861E /* platform.pem */; };
+		2338311A2232404000AA861E /* NSBool.m in Sources */ = {isa = PBXBuildFile; fileRef = 233831192232404000AA861E /* NSBool.m */; };
+		2338311B2232404000AA861E /* NSBool.m in Sources */ = {isa = PBXBuildFile; fileRef = 233831192232404000AA861E /* NSBool.m */; };
+		D27996FE57F6658706363080 /* libPods-ostentation iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FD4FFA3FF296414999BC0AE /* libPods-ostentation iOS.a */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		233830E3222E7C1D00AA861E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2338308C222E67A900AA861E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 233830AF222E67AB00AA861E;
+			remoteInfo = "ostentation macOS";
+		};
+		233830F1222E7C7700AA861E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2338308C222E67A900AA861E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23383099222E67AB00AA861E;
+			remoteInfo = "ostentation iOS";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		1FD4FFA3FF296414999BC0AE /* libPods-ostentation iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ostentation iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23383091222E67AA00AA861E /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		23383092222E67AA00AA861E /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		23383093222E67AA00AA861E /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
@@ -49,6 +95,30 @@
 		233830B9222E67AB00AA861E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		233830BB222E67AB00AA861E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		233830BC222E67AB00AA861E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		233830CE222E761600AA861E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		233830CF222E76E900AA861E /* private_key.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = private_key.pem; sourceTree = "<group>"; };
+		233830D0222E76E900AA861E /* public.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = public.pem; sourceTree = "<group>"; };
+		233830D5222E7A0200AA861E /* SecurityHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecurityHelper.h; sourceTree = "<group>"; };
+		233830D6222E7A0200AA861E /* SecurityHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecurityHelper.m; sourceTree = "<group>"; };
+		233830DE222E7C1D00AA861E /* ostentation macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ostentation macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		233830E2222E7C1D00AA861E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		233830EC222E7C7700AA861E /* ostentation iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ostentation iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		233830F0222E7C7700AA861E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		233830F6222E7CBB00AA861E /* DemoTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoTest.m; sourceTree = "<group>"; };
+		233830F9222E7DCC00AA861E /* DemoTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoTest.h; sourceTree = "<group>"; };
+		233830FA222E86E000AA861E /* rsaCert.crt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rsaCert.crt; sourceTree = "<group>"; };
+		233830FB222E86E000AA861E /* rsaPrivate.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = rsaPrivate.p12; sourceTree = "<group>"; };
+		233830FC222E86E000AA861E /* rsaCert.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = rsaCert.der; sourceTree = "<group>"; };
+		233830FD222E86E000AA861E /* rsaCertReq.csr */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rsaCertReq.csr; sourceTree = "<group>"; };
+		2338310A222FF7BA00AA861E /* platform.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = platform.der; sourceTree = "<group>"; };
+		2338310B222FF7BB00AA861E /* platform.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = platform.pem; sourceTree = "<group>"; };
+		233831182232404000AA861E /* NSBool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSBool.h; sourceTree = "<group>"; };
+		233831192232404000AA861E /* NSBool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSBool.m; sourceTree = "<group>"; };
+		41AE98306826CE6DDDE67899 /* Pods-ostentation macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ostentation macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ostentation macOS/Pods-ostentation macOS.debug.xcconfig"; sourceTree = "<group>"; };
+		7BAE736D545988F6BFE1AAFD /* Pods-ostentation iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ostentation iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-ostentation iOS/Pods-ostentation iOS.release.xcconfig"; sourceTree = "<group>"; };
+		9CB21293637BD1E0D5A37C00 /* Pods-ostentation macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ostentation macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-ostentation macOS/Pods-ostentation macOS.release.xcconfig"; sourceTree = "<group>"; };
+		C38B84F3A72D2777C28A9907 /* Pods-ostentation iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ostentation iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ostentation iOS/Pods-ostentation iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		E3F6BE511788B40ACFD93FAF /* libPods-ostentation macOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ostentation macOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +126,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D27996FE57F6658706363080 /* libPods-ostentation iOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		233830AD222E67AB00AA861E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				221CBB38128340C4F806D0E2 /* libPods-ostentation macOS.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		233830DB222E7C1D00AA861E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		233830E9222E7C7700AA861E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -69,13 +155,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09DC6D170FAB0491715E83DA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C38B84F3A72D2777C28A9907 /* Pods-ostentation iOS.debug.xcconfig */,
+				7BAE736D545988F6BFE1AAFD /* Pods-ostentation iOS.release.xcconfig */,
+				41AE98306826CE6DDDE67899 /* Pods-ostentation macOS.debug.xcconfig */,
+				9CB21293637BD1E0D5A37C00 /* Pods-ostentation macOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		2338308B222E67A900AA861E = {
 			isa = PBXGroup;
 			children = (
+				2338310A222FF7BA00AA861E /* platform.der */,
+				2338310B222FF7BB00AA861E /* platform.pem */,
+				233830FA222E86E000AA861E /* rsaCert.crt */,
+				233830FC222E86E000AA861E /* rsaCert.der */,
+				233830FD222E86E000AA861E /* rsaCertReq.csr */,
+				233830FB222E86E000AA861E /* rsaPrivate.p12 */,
+				233830D9222E7B7D00AA861E /* test */,
+				233830CF222E76E900AA861E /* private_key.pem */,
+				233830D0222E76E900AA861E /* public.pem */,
+				233830CE222E761600AA861E /* README.md */,
 				23383090222E67AA00AA861E /* ostentation Shared */,
 				2338309C222E67AB00AA861E /* ostentation iOS */,
 				233830B1222E67AB00AA861E /* ostentation macOS */,
+				233830DF222E7C1D00AA861E /* ostentation macOS Tests */,
+				233830ED222E7C7700AA861E /* ostentation iOS Tests */,
 				2338309B222E67AB00AA861E /* Products */,
+				09DC6D170FAB0491715E83DA /* Pods */,
+				32D32DD766C92D00CF6B614D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,6 +198,8 @@
 				23383093222E67AA00AA861E /* GameScene.h */,
 				23383094222E67AA00AA861E /* GameScene.m */,
 				23383095222E67AB00AA861E /* Assets.xcassets */,
+				233830D5222E7A0200AA861E /* SecurityHelper.h */,
+				233830D6222E7A0200AA861E /* SecurityHelper.m */,
 			);
 			path = "ostentation Shared";
 			sourceTree = "<group>";
@@ -96,6 +209,8 @@
 			children = (
 				2338309A222E67AB00AA861E /* ostentation.app */,
 				233830B0222E67AB00AA861E /* ostentation.app */,
+				233830DE222E7C1D00AA861E /* ostentation macOS Tests.xctest */,
+				233830EC222E7C7700AA861E /* ostentation iOS Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -129,6 +244,42 @@
 			path = "ostentation macOS";
 			sourceTree = "<group>";
 		};
+		233830D9222E7B7D00AA861E /* test */ = {
+			isa = PBXGroup;
+			children = (
+				233830F6222E7CBB00AA861E /* DemoTest.m */,
+				233830F9222E7DCC00AA861E /* DemoTest.h */,
+				233831182232404000AA861E /* NSBool.h */,
+				233831192232404000AA861E /* NSBool.m */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		233830DF222E7C1D00AA861E /* ostentation macOS Tests */ = {
+			isa = PBXGroup;
+			children = (
+				233830E2222E7C1D00AA861E /* Info.plist */,
+			);
+			path = "ostentation macOS Tests";
+			sourceTree = "<group>";
+		};
+		233830ED222E7C7700AA861E /* ostentation iOS Tests */ = {
+			isa = PBXGroup;
+			children = (
+				233830F0222E7C7700AA861E /* Info.plist */,
+			);
+			path = "ostentation iOS Tests";
+			sourceTree = "<group>";
+		};
+		32D32DD766C92D00CF6B614D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1FD4FFA3FF296414999BC0AE /* libPods-ostentation iOS.a */,
+				E3F6BE511788B40ACFD93FAF /* libPods-ostentation macOS.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -136,6 +287,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 233830C8222E67AB00AA861E /* Build configuration list for PBXNativeTarget "ostentation iOS" */;
 			buildPhases = (
+				E1EF01B5325A7028912574C4 /* [CP] Check Pods Manifest.lock */,
 				23383096222E67AB00AA861E /* Sources */,
 				23383097222E67AB00AA861E /* Frameworks */,
 				23383098222E67AB00AA861E /* Resources */,
@@ -153,6 +305,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 233830CB222E67AB00AA861E /* Build configuration list for PBXNativeTarget "ostentation macOS" */;
 			buildPhases = (
+				2A9B863B7E3F511E0B3724B1 /* [CP] Check Pods Manifest.lock */,
 				233830AC222E67AB00AA861E /* Sources */,
 				233830AD222E67AB00AA861E /* Frameworks */,
 				233830AE222E67AB00AA861E /* Resources */,
@@ -165,6 +318,42 @@
 			productName = "ostentation macOS";
 			productReference = 233830B0222E67AB00AA861E /* ostentation.app */;
 			productType = "com.apple.product-type.application";
+		};
+		233830DD222E7C1D00AA861E /* ostentation macOS Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 233830E5222E7C1D00AA861E /* Build configuration list for PBXNativeTarget "ostentation macOS Tests" */;
+			buildPhases = (
+				233830DA222E7C1D00AA861E /* Sources */,
+				233830DB222E7C1D00AA861E /* Frameworks */,
+				233830DC222E7C1D00AA861E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				233830E4222E7C1D00AA861E /* PBXTargetDependency */,
+			);
+			name = "ostentation macOS Tests";
+			productName = "ostentation macOS Tests";
+			productReference = 233830DE222E7C1D00AA861E /* ostentation macOS Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		233830EB222E7C7700AA861E /* ostentation iOS Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 233830F3222E7C7700AA861E /* Build configuration list for PBXNativeTarget "ostentation iOS Tests" */;
+			buildPhases = (
+				233830E8222E7C7700AA861E /* Sources */,
+				233830E9222E7C7700AA861E /* Frameworks */,
+				233830EA222E7C7700AA861E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				233830F2222E7C7700AA861E /* PBXTargetDependency */,
+			);
+			name = "ostentation iOS Tests";
+			productName = "ostentation iOS Tests";
+			productReference = 233830EC222E7C7700AA861E /* ostentation iOS Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -180,6 +369,14 @@
 					};
 					233830AF222E67AB00AA861E = {
 						CreatedOnToolsVersion = 10.1;
+					};
+					233830DD222E7C1D00AA861E = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 233830AF222E67AB00AA861E;
+					};
+					233830EB222E7C7700AA861E = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 23383099222E67AB00AA861E;
 					};
 				};
 			};
@@ -198,6 +395,8 @@
 			targets = (
 				23383099222E67AB00AA861E /* ostentation iOS */,
 				233830AF222E67AB00AA861E /* ostentation macOS */,
+				233830DD222E7C1D00AA861E /* ostentation macOS Tests */,
+				233830EB222E7C7700AA861E /* ostentation iOS Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -209,8 +408,16 @@
 			files = (
 				233830C0222E67AB00AA861E /* GameScene.sks in Resources */,
 				233830A5222E67AB00AA861E /* Main.storyboard in Resources */,
+				23383112222FF85700AA861E /* platform.der in Resources */,
+				233830D1222E76E900AA861E /* private_key.pem in Resources */,
 				233830BE222E67AB00AA861E /* Actions.sks in Resources */,
+				233830D3222E76E900AA861E /* public.pem in Resources */,
 				233830A8222E67AB00AA861E /* LaunchScreen.storyboard in Resources */,
+				23383104222E86E000AA861E /* rsaCertReq.csr in Resources */,
+				23383113222FF85700AA861E /* platform.pem in Resources */,
+				23383100222E86E000AA861E /* rsaPrivate.p12 in Resources */,
+				233830FE222E86E000AA861E /* rsaCert.crt in Resources */,
+				23383102222E86E000AA861E /* rsaCert.der in Resources */,
 				233830C4222E67AB00AA861E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,14 +426,79 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23383101222E86E000AA861E /* rsaPrivate.p12 in Resources */,
+				23383111222FF85600AA861E /* platform.pem in Resources */,
+				233830D2222E76E900AA861E /* private_key.pem in Resources */,
 				233830BA222E67AB00AA861E /* Main.storyboard in Resources */,
 				233830C1222E67AB00AA861E /* GameScene.sks in Resources */,
+				23383105222E86E000AA861E /* rsaCertReq.csr in Resources */,
+				233830D4222E76E900AA861E /* public.pem in Resources */,
+				23383110222FF85600AA861E /* platform.der in Resources */,
+				23383103222E86E000AA861E /* rsaCert.der in Resources */,
+				233830FF222E86E000AA861E /* rsaCert.crt in Resources */,
 				233830C5222E67AB00AA861E /* Assets.xcassets in Resources */,
 				233830BF222E67AB00AA861E /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		233830DC222E7C1D00AA861E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				233831142231092200AA861E /* platform.der in Resources */,
+				233831162231095000AA861E /* platform.pem in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		233830EA222E7C7700AA861E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				233831152231092200AA861E /* platform.der in Resources */,
+				233831172231095100AA861E /* platform.pem in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2A9B863B7E3F511E0B3724B1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ostentation macOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1EF01B5325A7028912574C4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ostentation iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		23383096222E67AB00AA861E /* Sources */ = {
@@ -235,6 +507,7 @@
 			files = (
 				233830A2222E67AB00AA861E /* GameViewController.m in Sources */,
 				233830AB222E67AB00AA861E /* main.m in Sources */,
+				233830D7222E7A0200AA861E /* SecurityHelper.m in Sources */,
 				233830C2222E67AB00AA861E /* GameScene.m in Sources */,
 				2338309F222E67AB00AA861E /* AppDelegate.m in Sources */,
 			);
@@ -246,12 +519,44 @@
 			files = (
 				233830B7222E67AB00AA861E /* GameViewController.m in Sources */,
 				233830BD222E67AB00AA861E /* main.m in Sources */,
+				233830D8222E7A0200AA861E /* SecurityHelper.m in Sources */,
 				233830C3222E67AB00AA861E /* GameScene.m in Sources */,
 				233830B4222E67AB00AA861E /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		233830DA222E7C1D00AA861E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2338311A2232404000AA861E /* NSBool.m in Sources */,
+				233830F7222E7CBB00AA861E /* DemoTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		233830E8222E7C7700AA861E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2338311B2232404000AA861E /* NSBool.m in Sources */,
+				233830F8222E7CBB00AA861E /* DemoTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		233830E4222E7C1D00AA861E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 233830AF222E67AB00AA861E /* ostentation macOS */;
+			targetProxy = 233830E3222E7C1D00AA861E /* PBXContainerItemProxy */;
+		};
+		233830F2222E7C7700AA861E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 23383099222E67AB00AA861E /* ostentation iOS */;
+			targetProxy = 233830F1222E7C7700AA861E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		233830A3222E67AB00AA861E /* Main.storyboard */ = {
@@ -388,6 +693,7 @@
 		};
 		233830C9222E67AB00AA861E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C38B84F3A72D2777C28A9907 /* Pods-ostentation iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -407,6 +713,7 @@
 		};
 		233830CA222E67AB00AA861E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BAE736D545988F6BFE1AAFD /* Pods-ostentation iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -427,6 +734,7 @@
 		};
 		233830CC222E67AB00AA861E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41AE98306826CE6DDDE67899 /* Pods-ostentation macOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "-";
@@ -446,6 +754,7 @@
 		};
 		233830CD222E67AB00AA861E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CB21293637BD1E0D5A37C00 /* Pods-ostentation macOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "-";
@@ -460,6 +769,91 @@
 				PRODUCT_BUNDLE_IDENTIFIER = fortune.demo.ostentation;
 				PRODUCT_NAME = ostentation;
 				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		233830E6222E7C1D00AA861E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "ostentation macOS Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = "fortune.demo.ostentation-macOS-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ostentation.app/Contents/MacOS/ostentation";
+			};
+			name = Debug;
+		};
+		233830E7222E7C1D00AA861E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "ostentation macOS Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = "fortune.demo.ostentation-macOS-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ostentation.app/Contents/MacOS/ostentation";
+			};
+			name = Release;
+		};
+		233830F4222E7C7700AA861E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "ostentation iOS Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "fortune.demo.ostentation-iOS-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ostentation.app/ostentation";
+			};
+			name = Debug;
+		};
+		233830F5222E7C7700AA861E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "ostentation iOS Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "fortune.demo.ostentation-iOS-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ostentation.app/ostentation";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -489,6 +883,24 @@
 			buildConfigurations = (
 				233830CC222E67AB00AA861E /* Debug */,
 				233830CD222E67AB00AA861E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		233830E5222E7C1D00AA861E /* Build configuration list for PBXNativeTarget "ostentation macOS Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				233830E6222E7C1D00AA861E /* Debug */,
+				233830E7222E7C1D00AA861E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		233830F3222E7C7700AA861E /* Build configuration list for PBXNativeTarget "ostentation iOS Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				233830F4222E7C7700AA861E /* Debug */,
+				233830F5222E7C7700AA861E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
