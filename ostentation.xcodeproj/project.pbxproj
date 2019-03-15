@@ -51,6 +51,8 @@
 		233831172231095100AA861E /* platform.pem in Resources */ = {isa = PBXBuildFile; fileRef = 2338310B222FF7BB00AA861E /* platform.pem */; };
 		2338311A2232404000AA861E /* NSBool.m in Sources */ = {isa = PBXBuildFile; fileRef = 233831192232404000AA861E /* NSBool.m */; };
 		2338311B2232404000AA861E /* NSBool.m in Sources */ = {isa = PBXBuildFile; fileRef = 233831192232404000AA861E /* NSBool.m */; };
+		9BEDDA21223BB5B60013C319 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BEDDA20223BB5B60013C319 /* RootViewController.m */; };
+		9BEDDA25223BC3EA0013C319 /* FeimaoSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BEDDA24223BC3EA0013C319 /* FeimaoSDK.framework */; };
 		D27996FE57F6658706363080 /* libPods-ostentation iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FD4FFA3FF296414999BC0AE /* libPods-ostentation iOS.a */; };
 /* End PBXBuildFile section */
 
@@ -116,6 +118,9 @@
 		233831192232404000AA861E /* NSBool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSBool.m; sourceTree = "<group>"; };
 		41AE98306826CE6DDDE67899 /* Pods-ostentation macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ostentation macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ostentation macOS/Pods-ostentation macOS.debug.xcconfig"; sourceTree = "<group>"; };
 		7BAE736D545988F6BFE1AAFD /* Pods-ostentation iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ostentation iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-ostentation iOS/Pods-ostentation iOS.release.xcconfig"; sourceTree = "<group>"; };
+		9BEDDA1F223BB5B60013C319 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		9BEDDA20223BB5B60013C319 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		9BEDDA24223BC3EA0013C319 /* FeimaoSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FeimaoSDK.framework; sourceTree = "<group>"; };
 		9CB21293637BD1E0D5A37C00 /* Pods-ostentation macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ostentation macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-ostentation macOS/Pods-ostentation macOS.release.xcconfig"; sourceTree = "<group>"; };
 		C38B84F3A72D2777C28A9907 /* Pods-ostentation iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ostentation iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ostentation iOS/Pods-ostentation iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		E3F6BE511788B40ACFD93FAF /* libPods-ostentation macOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ostentation macOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BEDDA25223BC3EA0013C319 /* FeimaoSDK.framework in Frameworks */,
 				D27996FE57F6658706363080 /* libPods-ostentation iOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -169,6 +175,7 @@
 		2338308B222E67A900AA861E = {
 			isa = PBXGroup;
 			children = (
+				9BEDDA24223BC3EA0013C319 /* FeimaoSDK.framework */,
 				2338310A222FF7BA00AA861E /* platform.der */,
 				2338310B222FF7BB00AA861E /* platform.pem */,
 				233830FA222E86E000AA861E /* rsaCert.crt */,
@@ -226,6 +233,8 @@
 				233830A6222E67AB00AA861E /* LaunchScreen.storyboard */,
 				233830A9222E67AB00AA861E /* Info.plist */,
 				233830AA222E67AB00AA861E /* main.m */,
+				9BEDDA1F223BB5B60013C319 /* RootViewController.h */,
+				9BEDDA20223BB5B60013C319 /* RootViewController.m */,
 			);
 			path = "ostentation iOS";
 			sourceTree = "<group>";
@@ -507,6 +516,7 @@
 			files = (
 				233830A2222E67AB00AA861E /* GameViewController.m in Sources */,
 				233830AB222E67AB00AA861E /* main.m in Sources */,
+				9BEDDA21223BB5B60013C319 /* RootViewController.m in Sources */,
 				233830D7222E7A0200AA861E /* SecurityHelper.m in Sources */,
 				233830C2222E67AB00AA861E /* GameScene.m in Sources */,
 				2338309F222E67AB00AA861E /* AppDelegate.m in Sources */,
@@ -698,16 +708,22 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T3DSL2X3MY;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "ostentation iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = fortune.demo.ostentation;
+				PRODUCT_BUNDLE_IDENTIFIER = fortune.demo;
 				PRODUCT_NAME = ostentation;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -718,16 +734,22 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T3DSL2X3MY;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "ostentation iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = fortune.demo.ostentation;
+				PRODUCT_BUNDLE_IDENTIFIER = fortune.demo;
 				PRODUCT_NAME = ostentation;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
